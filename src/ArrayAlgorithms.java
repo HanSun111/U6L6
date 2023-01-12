@@ -83,30 +83,11 @@ public class ArrayAlgorithms {
         numList[numList.length - 1] = shifted;
         }
 
-    /** Shifts all elements in numList to the LEFT shiftNum places;
-     *  this method modifies the original array and does not
-     *  return anything (void).
-     *
-     *  The first shiftNum elements of the array should wrap around
-     *  to the back of the array.  For example, given the array
-     *  {5, 1, 3, 4, 7, 6} and shiftNum = 2, this method MODIFIES
-     *  the array to {3, 4, 7, 6, 5, 1} (all elements shifted left
-     *  two with the first two elements wrapping around to the back)
-     *  And given the array {5, 1, 3, 4, 7, 6} and shiftNum = 4,
-     *  this method modifies the array to {7, 6, 5, 1, 3, 4}
-     *
-     *  Assume shiftNum <= numList.length (precondition)
-     *
-     *  DOES mutate (modify) numList
-     *  PRECONDITION: numList.length > 0
-     *  PRECONDITION: shiftNum <= numList.length
-     *
-     *  @param numList  original array of numbers; DOES get modified
-     */
-    public static void shiftNumLeftModify(int[] numList, int shiftNum)
-    { /* implement this method! */
 
-        }
+    public static void shiftNumLeftModify(int[] numList, int shiftNum) { /* implement this method! */
+
+    }
+
 
     public static void shiftNumLeftModifyTwo(int[] numList, int shiftNum)
     { /* implement this method! */
@@ -148,7 +129,7 @@ public class ArrayAlgorithms {
      *  @param numList  original array of numbers; does NOT get modified
      *  @return  array of ints that contains numList in reversed order
      */
-    public static int[] reverse(int[] numList)
+    //public static int[] reverse(int[] numList)
     { /* implement this method! */ }
 
     /** Reverses all elements in an array; this method modifies
