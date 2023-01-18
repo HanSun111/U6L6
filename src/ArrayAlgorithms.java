@@ -90,12 +90,19 @@ public class ArrayAlgorithms {
         }
     }
 
-
     public static void shiftNumLeftModifyTwo(int[] numList, int shiftNum)
     { /* implement this method! */
         int[] temp = new int[numList.length];
-        for(int i = 0; i < temp.length - 1; i++){
-            numList[i] = numList[i + 1];
+        for(int i = 0; i < temp.length; i++){
+            if(i + shiftNum < temp.length){
+                temp[i] = numList[i + shiftNum];
+            }
+            else {
+                temp[i] = numList[numList.length - ];
+            }
+        }
+        for(int i = 0; i < temp.length; i++){
+            numList[i] = temp[i];
         }
 
     }
@@ -135,8 +142,14 @@ public class ArrayAlgorithms {
      *  @param numList  original array of numbers; does NOT get modified
      *  @return  array of ints that contains numList in reversed order
      */
-    //public static int[] reverse(int[] numList)
-    { /* implement this method! */ }
+    public static int[] reverse(int[] numList)
+    { /* implement this method! */
+    int[] temp = new int[numList.length];
+    for(int i = 0; i < numList.length; i++){
+        temp[i] = numList[numList.length - (i + 1)];
+    }
+    return temp;
+    }
 
     /** Reverses all elements in an array; this method modifies
      *  the original array and does not return anything (void).
@@ -150,7 +163,15 @@ public class ArrayAlgorithms {
      *  @param numList  original array of numbers; DOES get modified
      */
     public static void reverseModify(int[] numList)
-    { /* implement this method! */ }
+    { /* implement this method! */
+        int[] temp = new int[numList.length];
+        for(int i = 0; i < numList.length; i++){
+            temp[i] = numList[numList.length - (i + 1)];
+        }
+        for(int i = 0; i < numList.length; i++){
+            numList[i] = temp[i];
+        }
+    }
 
 }
 
