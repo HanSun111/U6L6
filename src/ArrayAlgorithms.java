@@ -85,12 +85,18 @@ public class ArrayAlgorithms {
 
 
     public static void shiftNumLeftModify(int[] numList, int shiftNum) { /* implement this method! */
-
+        for(int i = 0; i < shiftNum; i++){
+            ArrayAlgorithms.shiftLeftModify(numList);
+        }
     }
 
 
     public static void shiftNumLeftModifyTwo(int[] numList, int shiftNum)
     { /* implement this method! */
+        int[] temp = new int[numList.length];
+        for(int i = 0; i < temp.length - 1; i++){
+            numList[i] = numList[i + 1];
+        }
 
     }
 
