@@ -97,9 +97,9 @@ public class ArrayAlgorithms {
             if(i + shiftNum < temp.length){
                 temp[i] = numList[i + shiftNum];
             }
-            else {
-                temp[i] = numList[numList.length - ];
-            }
+        }
+        for(int j = 0; j < shiftNum; j++){
+            temp[numList.length - (1 + j)] = numList[j];
         }
         for(int i = 0; i < temp.length; i++){
             numList[i] = temp[i];
@@ -127,8 +127,15 @@ public class ArrayAlgorithms {
      *
      *  @param numList  original array of numbers; DOES get modified
      */
-    public static void shiftNumRightModify(int[] numList, int shiftNum)
-    { /* implement this method! */ }
+    public static void shiftNumRightModify(int[] numList, int shiftNum) { /* implement this method! */
+        for (int j = 0; j < shiftNum; j++) {
+            int shifted = numList[numList.length - 1];
+            for (int i = numList.length - 1; i > 0; i--) {
+                numList[i] = numList[i - 1];
+            }
+            numList[0] = shifted;
+        }
+    }
 
 
     /** Returns a NEW array of ints that contains all elements of numList in
